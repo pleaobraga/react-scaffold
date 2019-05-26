@@ -20,3 +20,4 @@ Card.propTypes = {
   text: PropTypes.string.isRequired
 }
 
+export default Card

@@ -1,7 +1,8 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
+import { WelcomePage } from './pages'
 
 ReactDOM.render(
-  <div>Test</div>,
+  <WelcomePage />,
   document.getElementById('root')
 )
