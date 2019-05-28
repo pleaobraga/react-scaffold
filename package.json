@@ -7,7 +7,6 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest --config jest.config.json --no-cache",
-    "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage --colors"
   },
   "author": "pleaobraga",
