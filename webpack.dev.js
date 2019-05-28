@@ -7,7 +7,9 @@ module.exports = merge(common, {
 
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
+    port: 8080,
+    inline: true
   },
 
   mode: 'development'
