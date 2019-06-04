@@ -1,6 +1,16 @@
 .card {
     display: flex;
     flex-direction: column;
+    width: 40rem;
+    align-items: center;
+    height: 20rem;
+    justify-content: space-around;
 
-    border: 2px solid black;
+    &--title {
+        font-size: 7rem;
+    }
+
+    &--text {
+        font-size: 4rem;
+    }
 }

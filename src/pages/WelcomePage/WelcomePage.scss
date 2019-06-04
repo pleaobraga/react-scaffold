@@ -1,3 +1,5 @@
-.welcome-page {
-    display: flex;
+.page {
+    &--welcome {
+        align-items: flex-start;
+    }
 }

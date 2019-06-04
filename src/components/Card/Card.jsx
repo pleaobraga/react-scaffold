@@ -8,8 +8,8 @@ class Card extends React.Component {
 
     return (
       <div className="card" >
-        <hi>{title}</hi>
-        <p>{text}</p>
+        <h1 className="card--title">{title}</h1>
+        <p className="card--text" >{text}</p>
       </div>
     )
   }
