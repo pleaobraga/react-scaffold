@@ -4,9 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
-
   entry: {
-    app: './src/index.js',
+    app: './src/index.js'
   },
 
   plugins: [
@@ -17,7 +16,6 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
-
 
   output: {
     filename: '[name].bundle.js',
@@ -33,7 +31,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           query: {
-            presets: ['@babel/react', '@babel/preset-env'],
+            presets: ['@babel/react', '@babel/preset-env']
           }
         }
       },
@@ -47,11 +45,9 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      },
-    ],
+        use: ['file-loader']
+      }
+    ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
