@@ -47,6 +47,10 @@
             "error",
             "never"
         ],
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
         "no-use-before-define": 2
     }
 }

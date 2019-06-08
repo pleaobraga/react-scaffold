@@ -26,6 +26,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.2",
     "eslint": "^5.16.0",
+    "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-react": "^7.13.0",
     "eslint-watch": "^5.1.2",
     "file-loader": "^3.0.1",
