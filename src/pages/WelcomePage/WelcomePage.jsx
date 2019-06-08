@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from '../../components'
+import redux from 'redux-thunk'
 
 const WelcomePage = () => {
 

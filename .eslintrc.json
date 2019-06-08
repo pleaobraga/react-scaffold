@@ -21,6 +21,12 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    },
     "plugins": [
         "react"
     ],
@@ -40,6 +46,7 @@
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "no-use-before-define": 2
     }
 }
