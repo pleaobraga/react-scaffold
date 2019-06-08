@@ -51,5 +51,16 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom|react-redux|react-router-dom|redux|redux-thunk)[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
   }
 }
