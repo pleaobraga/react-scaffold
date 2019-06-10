@@ -20,6 +20,7 @@
   "author": "pleaobraga",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
