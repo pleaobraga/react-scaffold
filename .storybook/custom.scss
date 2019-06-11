@@ -1,0 +1,32 @@
+.centered-content {
+  position: relative !important;
+  left: 50% !important;
+}
+
+.formikFields {
+  margin: 50px;
+  margin-top: 10px;
+
+  & * {
+    width: 100px;
+  }
+}
+
+.children-relative {
+  &:first-child {
+    position: relative;
+  }
+
+  .login-dialog,
+  .expired-dialog {
+    position: relative !important;
+    height: 445px;
+    display: flex;
+    align-items: baseline;
+
+    > :first-child {
+      position: relative;
+      top: 220px;
+    }
+  }
+}
