@@ -1,10 +1,8 @@
 import { configure, addDecorator } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs } from '@storybook/addon-knobs'
-import '../presentation/styles/index.sass'
-import './custom.scss'
+import './styles/_main.scss'
 
-// automatically import all files ending in *.stories.tsx
 const req = require.context('/', true, /index.stories.js/)
 
 function loadStories() {
