@@ -6,6 +6,8 @@
   },
   "collectCoverageFrom": [
     "**/*.{js,jsx}",
+    "!**/*stories.{js,jsx}",
+    "!**/routes.js",
     "!**/node_modules/**",
     "!**/vendor/**",
     "!**/index.js",
