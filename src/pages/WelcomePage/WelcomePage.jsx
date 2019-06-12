@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../../components/Card'
+import './WelcomePage.scss'
 
 const WelcomePage = () => {
   return (
