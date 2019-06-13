@@ -4,7 +4,7 @@ import DynamicImport from './components/DynamicImport'
 import ErrorPage from './pages/ErrorPage'
 import Loading from './components/Loading'
 
-const WelcomePage = () => (
+const DynamicImportFunc = () => (
   <DynamicImport
     loadComponent={() => import('./pages/WelcomePage')}
     ErrorComponent={ErrorPage}
@@ -17,7 +17,7 @@ const Routes = () => {
     <BrowserRouter>
       <React.Suspense fallback={<ErrorPage />}>
         <Switch>
-          <Route exact path="/" component={WelcomePage} />
+          <Route exact path="/" component={DynamicImportFunc} />
         </Switch>
       </React.Suspense>
     </BrowserRouter>
