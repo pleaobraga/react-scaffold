@@ -4,9 +4,11 @@ import DynamicImport from './components/DynamicImport'
 import ErrorPage from './pages/ErrorPage'
 import Loading from './components/Loading'
 
-const DynamicImportFunc = () => (
+const WelcomePage = () => (
   <DynamicImport
-    loadComponent={() => import('./pages/WelcomePage')}
+    loadComponent={() =>
+      import(/*  webpackChunkName: "welcomePage" */ './pages/WelcomePage')
+    }
     ErrorComponent={ErrorPage}
     loadingComponent={<Loading />}
   />
@@ -17,7 +19,7 @@ const Routes = () => {
     <BrowserRouter>
       <React.Suspense fallback={<ErrorPage />}>
         <Switch>
-          <Route exact path="/" component={DynamicImportFunc} />
+          <Route exact path="/" component={WelcomePage} />
         </Switch>
       </React.Suspense>
     </BrowserRouter>
