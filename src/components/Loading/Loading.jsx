@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Loading.scss'
 
-const LoaderIcon = ({ color = '#298a95' }) => {
+const LoaderIcon = ({ color }) => {
   return (
     <svg
       className="lds-spinner"
@@ -269,6 +269,10 @@ const Loading = ({ className, color }) => {
       <LoaderIcon color={color} />
     </div>
   )
+}
+
+Loading.defaultProps = {
+  color: '#298a95'
 }
 
 Loading.propTypes = {
