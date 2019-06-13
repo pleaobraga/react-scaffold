@@ -1,9 +1,9 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import Loading from './Loading'
 
 describe('Loading', () => {
-  const loading = shallow(<Loading />)
+  let loading = mount(<Loading />)
 
   it('render proprely', () => {
     expect(loading).toMatchSnapshot()
