@@ -6,7 +6,9 @@ import Loading from './components/Loading'
 
 const DynamicImportFunc = () => (
   <DynamicImport
-    loadComponent={() => import('./pages/WelcomePage')}
+    loadComponent={() =>
+      import(/*  webpackChunkName: "welcomePage" */ './pages/WelcomePage')
+    }
     ErrorComponent={ErrorPage}
     loadingComponent={<Loading />}
   />
