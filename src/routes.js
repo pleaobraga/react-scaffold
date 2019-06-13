@@ -2,12 +2,13 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import DynamicImport from './components/DynamicImport'
 import ErrorPage from './pages/ErrorPage'
+import Loading from './components/Loading'
 
 const WelcomePage = () => (
   <DynamicImport
     loadComponent={() => import('./pages/WelcomePage')}
     ErrorComponent={ErrorPage}
-    loadingComponent={<div>Loading...</div>}
+    loadingComponent={<Loading />}
   />
 )
 
