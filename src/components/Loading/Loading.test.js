@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Loading from './Card'
+import Loading from './Loading'
 
 describe('Loading', () => {
-  const card = shallow(<Loading />)
+  const loading = shallow(<Loading />)
 
   it('render proprely', () => {
-    expect(card).toMatchSnapshot()
+    expect(loading).toMatchSnapshot()
   })
 })
