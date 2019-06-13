@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const DynamicImport = ({ loadComponent, loadingComponent, ErrorComponent }) => {
   const [component, setComponent] = React.useState(null)
@@ -18,6 +19,12 @@ const DynamicImport = ({ loadComponent, loadingComponent, ErrorComponent }) => {
   }
 
   return loadingComponent || <div>Loading...</div>
+}
+
+DynamicImport.propTypes = {
+  loadComponent: PropTypes.func.isRequired,
+  loadingComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+  ErrorComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
 }
 
 export default DynamicImport

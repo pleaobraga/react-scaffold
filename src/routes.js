@@ -7,6 +7,7 @@ const WelcomePage = () => (
   <DynamicImport
     loadComponent={() => import('./pages/WelcomePage')}
     ErrorComponent={ErrorPage}
+    loadingComponent={<div>Loading...</div>}
   />
 )
 
