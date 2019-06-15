@@ -1,24 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const DynamicImport = ({ loadComponent, loadingComponent, ErrorComponent }) => {
-  const [component, setComponent] = React.useState(null)
+class DynamicImport extends React.Component {
+  state = {
+    component: null
+  }
 
-  React.useEffect(() => {
+  componentDidMount() {
+    const { loadComponent, ErrorComponent } = this.props
+
     loadComponent()
       .then(comp => {
         comp.default
-          ? setComponent(comp.default)
-          : setComponent(ErrorComponent || <div>Error</div>)
+          ? this.setState({ Component: comp.default })
+          : this.setState({ Component: ErrorComponent })
       })
-      .catch(() => setComponent(ErrorComponent || <div>Error</div>))
-  }, [])
-
-  if (component) {
-    return component
+      .catch(() => this.setState({ Component: ErrorComponent }))
   }
 
-  return loadingComponent || <div>Loading...</div>
+  render() {
+    const { loadingComponent } = this.props
+    const { Component } = this.state
+
+    if (Component) {
+      return <Component />
+    }
+
+    return loadingComponent
+  }
+}
+
+DynamicImport.defaultProps = {
+  ErrorComponent: <div>Error</div>,
+  loadingComponent: <div>Loading...</div>
 }
 
 DynamicImport.propTypes = {

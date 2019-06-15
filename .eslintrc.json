@@ -33,6 +33,7 @@
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "jsx-quotes": ["error", "prefer-double"],
-    "no-use-before-define": 2
+    "no-use-before-define": 2,
+    "no-duplicate-imports": ["error", { "includeExports": true }]
   }
 }

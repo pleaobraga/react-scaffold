@@ -14,12 +14,24 @@ const WelcomePage = () => (
   />
 )
 
+const ContentPage = () => (
+  <DynamicImport
+    loadComponent={() =>
+      import(/*  webpackChunkName: "contentPage" */ './pages/ContentPage')
+    }
+    ErrorComponent={ErrorPage}
+    loadingComponent={<Loading />}
+  />
+)
+
 const Routes = () => {
   return (
     <BrowserRouter>
       <React.Suspense fallback={<ErrorPage />}>
         <Switch>
           <Route exact path="/" component={WelcomePage} />
+          <Route path="/content" component={ContentPage} />
+          <Route component={ErrorPage} />
         </Switch>
       </React.Suspense>
     </BrowserRouter>

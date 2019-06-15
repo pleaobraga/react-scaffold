@@ -4,7 +4,7 @@ import './WelcomePage.scss'
 
 const WelcomePage = () => {
   return (
-    <div className="page page--welcome">
+    <div className="page page-welcome">
       <Card title="Welcome" text="This is a rect boilerplate" />
     </div>
   )

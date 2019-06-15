@@ -8,7 +8,8 @@ module.exports = merge(common, {
     contentBase: './dist',
     hot: true,
     port: 8080,
-    inline: true
+    inline: true,
+    historyApiFallback: true
   },
 
   mode: 'development'
