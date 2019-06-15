@@ -10,7 +10,6 @@
     "!**/routes.js",
     "!**/node_modules/**",
     "!**/vendor/**",
-    "!**/index.js",
     "!**/coverage/**",
     "!**/webpack**",
     "!**/mocks/**"

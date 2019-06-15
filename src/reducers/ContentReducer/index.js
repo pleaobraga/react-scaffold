@@ -1,17 +1,16 @@
-import * as constant from '../utils/constants'
-import { simulateRequest } from '../utils/utils'
+import * as constant from '../../utils/constants'
+import { simulateRequest } from '../../utils/utils'
 
-const getContentSuccess = content => ({
+export const getContentStart = () => ({
+  type: constant.GET_CONTENT
+})
+
+export const getContentSuccess = content => ({
   type: constant.GET_CONTENT_SUCCESS,
   content
 })
 
-const getContentStart = content => ({
-  type: constant.GET_CONTENT,
-  content
-})
-
-const getContentError = error => ({
+export const getContentError = error => ({
   type: constant.GET_CONTENT_ERROR,
   error
 })
@@ -19,7 +18,7 @@ const getContentError = error => ({
 export const getContent = () => dispatch => {
   dispatch(getContentStart())
 
-  return simulateRequest({ title: 'Content', text: 'content Text' })
+  return simulateRequest({ title: 'Content', text: 'content text' })
     .then(response => {
       dispatch(getContentSuccess(response.data))
       return response.data

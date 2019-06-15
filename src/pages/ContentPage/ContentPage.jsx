@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Card from '../../components/Card'
 import Loading from '../../components/Loading'
-import { getContent as actionGetContent } from '../../reducers/contentReducer'
+import { getContent as actionGetContent } from '../../reducers/ContentReducer'
 import './ContentPage.scss'
 
 const ContentPage = () => {
