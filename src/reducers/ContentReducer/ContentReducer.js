@@ -34,27 +34,27 @@ const initialState = {
 
 const content = (state = initialState, action) => {
   switch (action.type) {
-  case constant.GET_CONTENT:
-    return { ...state, loadingContent: true }
+    case constant.GET_CONTENT:
+      return { ...state, loadingContent: true }
 
-  case constant.GET_CONTENT_SUCCESS:
-    return {
-      ...state,
-      content: action.content,
-      loadingContent: false,
-      errorContent: false
-    }
+    case constant.GET_CONTENT_SUCCESS:
+      return {
+        ...state,
+        content: action.content,
+        loadingContent: false,
+        errorContent: false
+      }
 
-  case constant.GET_CONTENT_ERROR:
-    return {
-      ...state,
-      content: action.error,
-      loadingContent: false,
-      errorContent: true
-    }
+    case constant.GET_CONTENT_ERROR:
+      return {
+        ...state,
+        content: action.error,
+        loadingContent: false,
+        errorContent: true
+      }
 
-  default:
-    return state
+    default:
+      return state
   }
 }
 
