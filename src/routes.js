@@ -10,7 +10,7 @@ const WelcomePage = () => (
       import(/*  webpackChunkName: "welcomePage" */ './pages/WelcomePage')
     }
     ErrorComponent={ErrorPage}
-    loadingComponent={<Loading />}
+    LoadingComponent={Loading}
   />
 )
 
@@ -20,7 +20,7 @@ const ContentPage = () => (
       import(/*  webpackChunkName: "contentPage" */ './pages/ContentPage')
     }
     ErrorComponent={ErrorPage}
-    loadingComponent={<Loading />}
+    LoadingComponent={Loading}
   />
 )
 

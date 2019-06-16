@@ -19,22 +19,22 @@ class DynamicImport extends React.Component {
   }
 
   render() {
-    const { loadingComponent } = this.props
+    const { LoadingComponent } = this.props
     const { Component } = this.state
 
-    return Component ? <Component /> : loadingComponent
+    return Component ? <Component /> : <LoadingComponent />
   }
 }
 
 DynamicImport.defaultProps = {
   ErrorComponent: () => <div id="error">Error</div>,
-  loadingComponent: <div id="loading">Loading...</div>
+  LoadingComponent: () => <div id="loading">Loading...</div>
 }
 
 DynamicImport.propTypes = {
   loadComponent: PropTypes.func.isRequired,
-  loadingComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
-  ErrorComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+  LoadingComponent: PropTypes.func,
+  ErrorComponent: PropTypes.func
 }
 
 export default DynamicImport

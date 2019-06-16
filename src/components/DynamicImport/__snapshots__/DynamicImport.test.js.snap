@@ -3,14 +3,8 @@
 exports[`DynamicImport Should render Error component 1`] = `
 <DynamicImport
   ErrorComponent={[Function]}
+  LoadingComponent={[Function]}
   loadComponent={[Function]}
-  loadingComponent={
-    <div
-      id="loading"
-    >
-      Loading...
-    </div>
-  }
 >
   <ErrorComponent>
     <div
@@ -25,14 +19,8 @@ exports[`DynamicImport Should render Error component 1`] = `
 exports[`DynamicImport Should render component 1`] = `
 <DynamicImport
   ErrorComponent={[Function]}
+  LoadingComponent={[Function]}
   loadComponent={[Function]}
-  loadingComponent={
-    <div
-      id="loading"
-    >
-      Loading...
-    </div>
-  }
 >
   <a>
     <div
@@ -47,19 +35,15 @@ exports[`DynamicImport Should render component 1`] = `
 exports[`DynamicImport render proprely 1`] = `
 <DynamicImport
   ErrorComponent={[Function]}
+  LoadingComponent={[Function]}
   loadComponent={[Function]}
-  loadingComponent={
+>
+  <LoadingComponent>
     <div
       id="loading"
     >
       Loading...
     </div>
-  }
->
-  <div
-    id="loading"
-  >
-    Loading...
-  </div>
+  </LoadingComponent>
 </DynamicImport>
 `;
