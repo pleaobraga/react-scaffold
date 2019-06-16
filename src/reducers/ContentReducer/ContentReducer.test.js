@@ -5,7 +5,7 @@ import contentReducer, {
   getContentError,
   getContentSuccess,
   getContent
-} from './index'
+} from './ContentReducer'
 
 describe('Content Redux', () => {
   it('should return the initial state', () => {
