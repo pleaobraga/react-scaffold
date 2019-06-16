@@ -8,6 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "test": "jest --config jest.config.json --no-cache",
     "test:watch": "npm run test -- --watch",
+    "test:update": "npm run test -- -u",
     "test:coverage": "npm run test -- --coverage --colors",
     "lint": "esw . --ext .js,.jsx  --color ",
     "lint:watch": "npm run lint -- --watch",
