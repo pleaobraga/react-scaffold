@@ -27,8 +27,8 @@ class DynamicImport extends React.Component {
 }
 
 DynamicImport.defaultProps = {
-  ErrorComponent: <div>Error</div>,
-  loadingComponent: <div>Loading...</div>
+  ErrorComponent: <div id="error">Error</div>,
+  loadingComponent: <div id="loading">Loading...</div>
 }
 
 DynamicImport.propTypes = {

@@ -1,3 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`welcomePage render proprely 1`] = `ShallowWrapper {}`;
+exports[`welcomePage render proprely 1`] = `
+<div
+  className="page page-welcome"
+>
+  <Memo(Card)
+    text="This is a rect boilerplate"
+    title="Welcome"
+  />
+</div>
+`;
