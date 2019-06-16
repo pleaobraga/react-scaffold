@@ -6,8 +6,8 @@ import DynamicImport from './DynamicImport'
 const a = () => <div id="content">test</div>
 
 const request = data => {
-  return new Promise((resolve, reject) => {
-    resolve({ default: a })
+  return new Promise(resolve => {
+    data ? resolve({ default: a }) : resolve({ default: null })
     // process.nextTick(() =>
     //   data
     //     ? resolve({ default: a })
@@ -28,7 +28,7 @@ describe.only('DynamicImport', () => {
     expect(dynamicImport.find('#loading').length).toBe(1)
   })
 
-  it('render proprely', async () => {
+  it('Should render component', async () => {
     const dynamicImport = await mount(
       <DynamicImport loadComponent={() => request('test')} />
     )
@@ -36,6 +36,17 @@ describe.only('DynamicImport', () => {
     dynamicImport.update()
 
     expect(dynamicImport).toMatchSnapshot()
-    expect(dynamicImport.contains(<div id="content">test</div>)).toEqual(true)
+    expect(dynamicImport.find('#content').length).toBe(1)
+  })
+
+  it('Should render Error component', async () => {
+    const dynamicImport = await mount(
+      <DynamicImport loadComponent={() => request()} />
+    )
+
+    dynamicImport.update()
+
+    expect(dynamicImport).toMatchSnapshot()
+    expect(dynamicImport.find('#error').length).toBe(1)
   })
 })
