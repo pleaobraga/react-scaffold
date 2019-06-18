@@ -98,21 +98,5 @@ describe('Content Redux', () => {
         expect(actions).toEqual(payload)
       })
     })
-
-    it.skip('Error to get the content', async () => {
-      const store = mockStore(initialState)
-
-      return store.dispatch(getContent()).then(() => {
-        const content = { title: 'Content', text: 'content text' }
-        const payload = [
-          { type: constant.GET_CONTENT },
-          { type: constant.GET_CONTENT_SUCCESS, content }
-        ]
-
-        const actions = store.getActions()
-        console.log(actions)
-        expect(actions).toEqual(payload)
-      })
-    })
   })
 })
