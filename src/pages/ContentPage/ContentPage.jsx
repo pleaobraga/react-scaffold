@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import Card from '../../components/Card'
 import Loading from '../../components/Loading'
 import { getContent as actionGetContent } from '../../reducers/ContentReducer'
+import ErrorPage from '../ErrorPage'
 import './ContentPage.scss'
 
 const ContentPage = () => {
   const dispatch = useDispatch()
   const pageContent = useSelector(state => ({ content: state.content }))
+  const pageError = useSelector(state => state.errorContent)
 
   const getContent = React.useCallback(() => dispatch(actionGetContent()), [
     dispatch
@@ -17,7 +19,9 @@ const ContentPage = () => {
     getContent()
   }, [])
 
-  return pageContent.content ? (
+  return pageError ? (
+    <ErrorPage />
+  ) : pageContent.content ? (
     <div className="page page-content">
       <Card title={pageContent.content.title} text={pageContent.content.text} />
     </div>
