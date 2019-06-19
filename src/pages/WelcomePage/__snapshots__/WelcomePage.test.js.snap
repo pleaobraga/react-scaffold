@@ -5,7 +5,7 @@ exports[`welcomePage render proprely 1`] = `
   className="page page-welcome"
 >
   <Memo(Card)
-    text="This is a rect boilerplate"
+    text="This is a Rect Scaffold made by pleaobraga"
     title="Welcome"
   />
 </div>
