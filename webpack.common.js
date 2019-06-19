@@ -11,8 +11,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management',
-      template: 'public/index.html'
+      title: 'React Scaffold',
+      template: 'public/index.html',
+      favicon: './images/react.png'
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
