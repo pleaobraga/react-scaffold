@@ -7,7 +7,7 @@ import './ContentPage.scss'
 
 const ContentPage = () => {
   const dispatch = useDispatch()
-  const pageContent = useSelector(state => state.content)
+  const pageContent = useSelector(state => ({ content: state.content }))
 
   const getContent = React.useCallback(() => dispatch(actionGetContent()), [
     dispatch

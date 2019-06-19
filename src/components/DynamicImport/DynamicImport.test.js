@@ -8,13 +8,6 @@ const a = () => <div id="content">test</div>
 const request = data => {
   return new Promise(resolve => {
     data ? resolve({ default: a }) : resolve({ default: null })
-    // process.nextTick(() =>
-    //   data
-    //     ? resolve({ default: a })
-    //     : reject({
-    //       error: 'Error'
-    //     })
-    // )
   })
 }
 

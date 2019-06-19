@@ -1,5 +1,4 @@
 jest.mock('../../utils/utils')
-import 'babel-polyfill'
 import { initialState, mockStore } from '../__mocks__/reduxMock'
 import * as constant from '../../utils/constants'
 import contentReducer, {
