@@ -8,8 +8,7 @@ import './ContentPage.scss'
 
 const ContentPage = () => {
   const dispatch = useDispatch()
-  const pageContent = useSelector(state => ({ content: state.content }))
-  const pageError = useSelector(state => state.errorContent)
+  const pageContent = useSelector(state => state.content)
 
   const getContent = React.useCallback(() => dispatch(actionGetContent()), [
     dispatch
@@ -19,11 +18,14 @@ const ContentPage = () => {
     getContent()
   }, [])
 
-  return pageError ? (
+  return pageContent.errorContent ? (
     <ErrorPage />
   ) : pageContent.content ? (
     <div className="page page-content">
-      <Card title={pageContent.content.title} text={pageContent.content.text} />
+      <Card
+        title={pageContent.content.title}
+        text={pageContent.content.text}
+      />
     </div>
   ) : (
     <Loading />

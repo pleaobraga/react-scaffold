@@ -1,5 +1,5 @@
 jest.mock('../../utils/utils')
-import { initialState, mockStore } from '../__mocks__/reduxMock'
+import { initialStateReducer, mockStore } from '../__mocks__/reduxMock'
 import * as constant from '../../utils/constants'
 import contentReducer, {
   getContentStart,
@@ -10,14 +10,14 @@ import contentReducer, {
 
 describe('Content Redux', () => {
   it('should return the initial state', () => {
-    expect(contentReducer(undefined, {})).toEqual(initialState)
+    expect(contentReducer(undefined, {})).toEqual(initialStateReducer)
   })
 
   describe('Start to get the content', () => {
     const payload = { type: constant.GET_CONTENT }
 
     it('should dispatch getContentStart', () => {
-      const store = mockStore(initialState)
+      const store = mockStore(initialStateReducer)
 
       store.dispatch(getContentStart())
 
@@ -26,7 +26,7 @@ describe('Content Redux', () => {
     })
 
     it(`should handle ${constant.GET_CONTENT}`, () => {
-      const actualState = { ...initialState, loadingContent: true }
+      const actualState = { ...initialStateReducer, loadingContent: true }
 
       expect(contentReducer(undefined, payload)).toEqual(actualState)
     })
@@ -37,7 +37,7 @@ describe('Content Redux', () => {
     const payload = { type: constant.GET_CONTENT_ERROR, error }
 
     it('should dispatch getContentError', () => {
-      const store = mockStore(initialState)
+      const store = mockStore(initialStateReducer)
 
       store.dispatch(getContentError(error))
 
@@ -47,7 +47,7 @@ describe('Content Redux', () => {
 
     it(`should handle ${constant.GET_CONTENT_ERROR}`, () => {
       const actualState = {
-        ...initialState,
+        ...initialStateReducer,
         content: error,
         loadingContent: false,
         errorContent: true
@@ -62,7 +62,7 @@ describe('Content Redux', () => {
     const payload = { type: constant.GET_CONTENT_SUCCESS, content }
 
     it('should dispatch getContentSuccess', () => {
-      const store = mockStore(initialState)
+      const store = mockStore(initialStateReducer)
 
       store.dispatch(getContentSuccess(content))
 
@@ -72,7 +72,7 @@ describe('Content Redux', () => {
 
     it(`should handle ${constant.GET_CONTENT_SUCCESS}`, () => {
       const actualState = {
-        ...initialState,
+        ...initialStateReducer,
         content: content,
         loadingContent: false,
         errorContent: false
@@ -84,7 +84,7 @@ describe('Content Redux', () => {
 
   describe('Get the content', () => {
     it('Success to get the content', () => {
-      const store = mockStore(initialState)
+      const store = mockStore(initialStateReducer)
 
       return store.dispatch(getContent()).then(() => {
         const content = { title: 'Content', text: 'content text' }

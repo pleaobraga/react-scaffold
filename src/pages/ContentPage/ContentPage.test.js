@@ -4,13 +4,19 @@ import React from 'react'
 import { mount } from 'enzyme'
 import ContentPage from './ContentPage'
 import { Provider } from 'react-redux'
-import { mockStore, initialState } from '../../reducers/__mocks__/reduxMock'
+import {
+  mockStore,
+  initialStateRootReducer
+} from '../../reducers/__mocks__/reduxMock'
 
 const setup = state => {
   const newState = {
-    ...initialState,
-    ...state
+    content: {
+      ...initialStateRootReducer.content,
+      ...state
+    }
   }
+
 
   const store = mockStore(newState)
 
