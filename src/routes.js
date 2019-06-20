@@ -10,7 +10,7 @@ const WelcomePage = () => (
       import(/*  webpackChunkName: "welcomePage" */ './pages/WelcomePage')
     }
     ErrorComponent={ErrorPage}
-    LoadingComponent={Loading}
+    LoadingComponent={() => <Loading />}
   />
 )
 
@@ -19,8 +19,8 @@ const ContentPage = () => (
     loadComponent={() =>
       import(/*  webpackChunkName: "contentPage" */ './pages/ContentPage')
     }
-    ErrorComponent={ErrorPage}
-    LoadingComponent={Loading}
+    ErrorComponent={() => ErrorPage}
+    LoadingComponent={() => <Loading />}
   />
 )
 
@@ -29,8 +29,8 @@ const Routes = () => {
     <BrowserRouter>
       <React.Suspense fallback={<ErrorPage />}>
         <Switch>
-          <Route exact path="/" component={WelcomePage} />
           <Route path="/content" component={ContentPage} />
+          <Route exact path="/" component={WelcomePage} />
           <Route component={ErrorPage} />
         </Switch>
       </React.Suspense>
