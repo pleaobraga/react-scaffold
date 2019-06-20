@@ -1,6 +1,6 @@
 # React Scaffold
 
-This is a React based project which helps you to start quickly your own new React Project.
+This is a React based project, builded from the scratch by me, which helps you to start quickly your own new React Project.
 
 It is integrate with the newest libraries like:
 
