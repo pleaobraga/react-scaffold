@@ -1,8 +1,8 @@
 # React Scaffold
 
-This is a React based project, builded from the scratch by me, which helps you to start quickly your own new React Project.
+This is a React based project, which I built from scratch, that helps you to quickly start your own new React Project.
 
-It is integrate with the newest libraries like:
+It is integrated with the newest libraries of:
 
 - Redux
 - React Router Dom
@@ -12,27 +12,27 @@ It is integrate with the newest libraries like:
 - Babel
 - Webpack
 
-There is a small implementation inside of it that can helps you with:
+There is a small implementation that can helps you to:
 
-- To improve the architecture of your project
-- To test you project with Jest and Enzyme
-- To perform your project using dynamic imports
-- To see pratical exemples of **the new react hooks feature**
-- To see some implementation of the new react-redux features like useSelector and useDispatch
-- To document you project with storybook
-- To writte better your code using Prettier and ESlint
+- Improve the architecture of your project
+- Test you project with Jest and Enzyme
+- Increase the performance of your project using dynamic imports
+- See practical examples of the new \***\*React Hooks feature**
+- See some implementation of the new React-redux features like useSelector and useDispatch
+- Document your project with Storybook
+- Improve your code using Prettier and ESlint
 
 # Quick Start
 
 ## Installing dependencies
 
-Clone this project inside your project folder then navigate to inside of it and use
+To start the project use this command in your terminal
 
 ```
 npm i
 ```
 
-in your terminal to installall dependencies
+in your terminal to install all dependencies
 
 ## Starting the project
 
@@ -42,11 +42,11 @@ To start the project use this command in your terminal
 npm start
 ```
 
-wait for few seconds and the project will open a nwe tab in your browser automatically
+wait for a few seconds and the project will open a new tab in your browser automatically
 
 ### Changing default port
 
-the default port is 8080 but if you want to change it to the port 3000 use this command
+The default port is 8080 but if you want to change it to the port 3000 use this command
 
 ```
 npm start -- --port=3000
@@ -68,7 +68,7 @@ There are some commands to test the project
 npm run test
 ```
 
-This command executes the jest and test all **.test.js** files in your project
+This command executes the Jest and test all **.test.js** files in your project
 
 ### Watch Tests in the project
 
@@ -76,7 +76,7 @@ This command executes the jest and test all **.test.js** files in your project
 npm run test:watch
 ```
 
-This command executes the jest watchAll and watch all your tests
+This command executes the Jest watchAll and observes all your tests
 
 ### Update snapshots
 
@@ -92,37 +92,35 @@ This command executes update all snapshots
 npm run test:coverage
 ```
 
-This command executes jest coverage and check the coverage of your tests
+This command executes Jest coverage and checks the coverage of your tests
 
 ## Using Storybok
 
-To start the storybook use the command:
+To start the Storybook use the command:
 
 ```
 npm run storybook
 ```
 
-after that a ner web page will open with the storybook running on the port 9000
+This will open a new webpage with Storybook running on port 9000
 
 ### Addons
 
-This storybook is already configurated with some addons like Knobs, Actions, and info
+This storybook is already configured with some addons like Knobs, Actions, and Info.
 
-### Creat a new storie
+### Create a new story
 
-To create a new storie you create the file {yourComponent}.stories.js
+To create a new story you create the file {yourComponent}.stories.js
+Export the story and import it to **./.storybook/index.stories.js**
+You can check this file **./.storybook/index.stories.js** and other examples in the project to better understand the process.
 
-export the storie and import it on **./.storybook/index.stories.js**
+### Create a new story with Redux
 
-You can check the this **./.storybook/index.stories.js** filr and other example on the project to undestand better the process
-
-### Creat a new storie with redux
-
-Check the **src/pages/ContentPage/ContentPage.stories.js** to see how to use the redux with storybook
+Check the **src/pages/ContentPage/ContentPage.stories.js** to see how to use the Redux with Storybook
 
 ## Commits
 
-This project uses Husk.js and everytime you push the code it will run the pre-commit tesk to check the lint and run all tests, **so the code will only be pushed if its respects the lint rules and has not any test error**
+This project uses Husk.js and everytime you push the code it will run the pre-commit task to check the lint and run all tests, **so the code will only be pushed if it follows the lint rules and does not have any test errors.**
 
 ## Project Architecture
 
@@ -140,7 +138,7 @@ src
 
 ### Components Pages
 
-The architecture for the js files is like fallow the example
+The architecture for the js files is like follow the example
 
 ```
 components
