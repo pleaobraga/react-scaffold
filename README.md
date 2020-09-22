@@ -1,8 +1,8 @@
 # React Scaffold
 
-This is a React based project, which I built from scratch, that helps you to quickly start your own new React Project.
+This is a React based project, which I built from scratch, that helps you to start quickly your own new React Project.
 
-It is integrated with the newest libraries of:
+It is integrated with the newest libraries such as:
 
 - Redux
 - React Router Dom
@@ -12,7 +12,7 @@ It is integrated with the newest libraries of:
 - Babel
 - Webpack
 
-There is a small implementation that can helps you to:
+There is a small implementation which can helps you to:
 
 - Improve the architecture of your project
 - Test you project with Jest and Enzyme
@@ -26,23 +26,20 @@ There is a small implementation that can helps you to:
 
 ## Installing dependencies
 
-To start the project use this command in your terminal
-
+To start the project use this command to install all depedencies
 ```
 npm i
 ```
 
-in your terminal to install all dependencies
 
 ## Starting the project
 
-To start the project use this command in your terminal
+To start the project use this command in your terminal and wait for a few seconds and the project will open a new tab in your browser automatically
 
 ```
 npm start
 ```
 
-wait for a few seconds and the project will open a new tab in your browser automatically
 
 ### Changing default port
 
@@ -96,21 +93,20 @@ This command executes Jest coverage and checks the coverage of your tests
 
 ## Using Storybok
 
-To start the Storybook use the command:
+To start the Storybook use the command, it will open a new webpage with Storybook running on port 9000
 
 ```
 npm run storybook
 ```
 
-This will open a new webpage with Storybook running on port 9000
 
 ### Addons
 
-This storybook is already configured with some addons like Knobs, Actions, and Info.
+The storybook is already configured with some addons like Knobs, Actions, and Info.
 
 ### Create a new story
 
-To create a new story you create the file {yourComponent}.stories.js
+To create a new story, create a file {yourComponent}.stories.js
 Export the story and import it to **./.storybook/index.stories.js**
 You can check this file **./.storybook/index.stories.js** and other examples in the project to better understand the process.
 
@@ -124,7 +120,8 @@ This project uses Husk.js and everytime you push the code it will run the pre-co
 
 ## Project Architecture
 
-The project achitechture is page based, and usin SOLID principles and the source folder is like:
+The project uses SOLID principles and base page architecture. 
+The Source folder is:
 
 ```
 src
@@ -138,7 +135,7 @@ src
 
 ### Components Pages
 
-The architecture for the js files is like follow the example
+The architecture for the components is:
 
 ```
 components
@@ -150,25 +147,25 @@ components
     Component.jsx
 ```
 
-So each component has its on test, storie, jsx file and a index to export all of it.
+So each component has its own tests, stories, jsx file and a index to export what is necessary.
 
-This architechture is easy to mantain because to fix a component you can go in its folder and change ereything from it.
+This architechture is easy to mantain because to fix a component you can go in its folder and change everything of it.
 
 ### Reducers
 
-For this example I did not split the reducer from the action creators because this project is too small, but if the project increase so slit reducer from actions.
+For this example I did not split the reducer from the action creators because this project is too small, but if the project increase it's better split reducer from its actions.
 
 ### Utils
 
-In the utils folder I keep some functions and the contants files
+In the utils folder I keep some functions and the constants files
 
 ## Dynamic Import and Performance
 
-Nowadays we need to pay attention on performace, if we do not take care of it your project wold work but slowly and the client expetrience become very frustated.
+Nowadays we need to pay attention on performace, if we do not take care of it, your project would work but slowly and the customer experience will be very frustrating.
 
-I created in ths project a component called DynamicImport, it is integrate with the webpack so you can create diferent bundles with it and import them dynamically so you only will import the correct bundle for that page.
+I created in ths project a component called **DynamicImport**, it is integrated with the webpack what is does is basically import the bundle of the content only when the component is rendered in the page.
 
-It is applyed on the **routes.js** file, so each page you import will automaticaly create a new bandle performaticly bundle.
+It is apply on the **routes.js** file, so each page that you import will automaticaly create a new optimal bundle.
 
 Check on the routes file how to use it and check the DynamicImport component to see how it works
 
