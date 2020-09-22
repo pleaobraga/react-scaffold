@@ -26,7 +26,6 @@ There is a small implementation which can helps you to:
 
 ## Installing dependencies
 
-To start the project use this command to install all depedencies
 ```
 npm i
 ```
