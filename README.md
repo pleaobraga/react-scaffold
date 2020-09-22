@@ -181,7 +181,7 @@ const WelcomePage = () => (
 )
 ```
 
-This component is better than **React.lazy** because it can handle 3 diferents situation:
+This component is better than **React.lazy** because it can handle 3 diferent situations:
 
 - Loading
 - Error
