@@ -134,14 +134,14 @@ components
   Component
     index.js
     Component.test.js
-    Component.storie.js (what makes sense)
-    Component.scss (what makes sense)
+    Component.storie.js (when it makes sense)
+    Component.scss (when it makes sense)
     Component.jsx
 ```
 
 So each component has its own tests, stories, jsx file and a index to export what is necessary.
 
-This architechture is easy to mantain because to fix a component you can go in its folder and change everything of it.
+This architechture is easy to mantain because to fix a component you can go in its folder and change everithing you need (all components are decoupled).
 
 ### Reducers
 
@@ -155,9 +155,9 @@ In the utils folder I keep some functions and the constants files
 
 Nowadays we need to pay attention on performace, if we do not take care of it, your project would work but slowly and the customer experience will be very frustrating.
 
-I created in ths project a component called **DynamicImport**, it is integrated with the webpack what is does is basically import the bundle of the content only when the component is rendered in the page.
+I created in ths project a component called **DynamicImport**, it is integrated with the webpack and what it does is basically import the bundle of the content only when the component is rendered in the page.
 
-It is apply on the **routes.js** file, so each page that you import will automaticaly create a new optimal bundle.
+It was applied in the **routes.js** file, so each page that you import will automaticaly create a new optimal bundle.
 
 This is a example how to use the DynamicImports
 
@@ -179,7 +179,7 @@ This component is better than **React.lazy** because it can handle 3 diferent si
 - Error
 - Component
 
-diferent from **React.lazy** and **React.Suspense** which could only handle:
+diferent from **React.lazy** and **React.Suspense** which could only handle 2 situasions:
 
 - Loading
 - Component
