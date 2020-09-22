@@ -64,15 +64,11 @@ There are some commands to test the project
 npm run test
 ```
 
-This command executes the Jest and test all **.test.js** files in your project
-
 ### Watch Tests in the project
 
 ```
 npm run test:watch
 ```
-
-This command executes the Jest watchAll and observes all your tests
 
 ### Update snapshots
 
@@ -80,15 +76,12 @@ This command executes the Jest watchAll and observes all your tests
 npm run test:update
 ```
 
-This command executes update all snapshots
 
 ### Check the coverage
 
 ```
 npm run test:coverage
 ```
-
-This command executes Jest coverage and checks the coverage of your tests
 
 ## Using Storybok
 
