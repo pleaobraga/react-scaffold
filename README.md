@@ -167,7 +167,19 @@ I created in ths project a component called **DynamicImport**, it is integrated 
 
 It is apply on the **routes.js** file, so each page that you import will automaticaly create a new optimal bundle.
 
-Check on the routes file how to use it and check the DynamicImport component to see how it works
+This is a example how to use the DynamicImports
+
+```
+const WelcomePage = () => (
+  <DynamicImport
+    loadComponent={() =>
+      import(/*  webpackChunkName: "welcomePage" */ './pages/WelcomePage')
+    }
+    ErrorComponent={ErrorPage}
+    LoadingComponent={() => <Loading />}
+  />
+)
+```
 
 This component is better than **React.lazy** because it can handle 3 diferents situation:
 
