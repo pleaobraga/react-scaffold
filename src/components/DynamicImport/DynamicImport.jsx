@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class DynamicImport extends React.Component {
+class DynamicImport extends Component {
   state = {
-    component: null
+    component: null,
   }
 
   componentDidMount() {
     const { loadComponent, ErrorComponent } = this.props
 
     loadComponent()
-      .then(comp => {
+      .then((comp) => {
         comp.default
           ? this.setState({ Component: comp.default })
           : this.setState({ Component: ErrorComponent })
@@ -28,13 +28,13 @@ class DynamicImport extends React.Component {
 
 DynamicImport.defaultProps = {
   ErrorComponent: () => <div id="error">Error</div>,
-  LoadingComponent: () => <div id="loading">Loading...</div>
+  LoadingComponent: () => <div id="loading">Loading...</div>,
 }
 
 DynamicImport.propTypes = {
   loadComponent: PropTypes.func.isRequired,
   LoadingComponent: PropTypes.func,
-  ErrorComponent: PropTypes.func
+  ErrorComponent: PropTypes.func,
 }
 
 export default DynamicImport
