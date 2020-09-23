@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
   },
 
   plugins: [
@@ -13,15 +13,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'React Scaffold',
       template: 'public/index.html',
-      favicon: './images/react.png'
+      favicon: './images/react.png',
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
 
   module: {
@@ -36,30 +36,31 @@ module.exports = {
               [
                 '@babel/preset-react',
                 {
-                  throwIfNamespace: false
-                }
+                  throwIfNamespace: false,
+                },
               ],
-              '@babel/preset-env'
-            ]
-          }
-        }
+              '@babel/preset-env',
+            ],
+          },
+        },
       },
       {
         test: /\.scss$/,
         use: [
           'style-loader', // creates style nodes from JS strings
           'css-loader', // translates CSS into CommonJS
-          'sass-loader' // compiles Sass to CSS, using Node Sass by default
-        ]
+          'postcss-loader',
+          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
-      }
-    ]
+        use: ['file-loader'],
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
   },
   optimization: {
     splitChunks: {
@@ -67,9 +68,9 @@ module.exports = {
         vendor: {
           test: /[\\/]node_modules[\\/](react|react-dom|react-redux|react-router-dom|redux|redux-thunk|prop-types)[\\/]/,
           name: 'vendor',
-          chunks: 'all'
-        }
-      }
-    }
-  }
+          chunks: 'all',
+        },
+      },
+    },
+  },
 }
