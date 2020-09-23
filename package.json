@@ -6,8 +6,8 @@
   "description": "React boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js",
     "test": "jest --config jest.config.json --no-cache --verbose",
     "test:watch": "npm run test --  --watchAll",
     "test:update": "npm run test -- -u",
