@@ -16,4 +16,4 @@ Card.propTypes = {
   text: PropTypes.string.isRequired,
 }
 
-export default React.memo(Card)
+export default Card
