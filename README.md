@@ -27,7 +27,7 @@ There is a small implementation which can helps you to:
 ## Installing dependencies
 
 ```
-npm i
+yarn
 ```
 
 ## Starting the project
@@ -35,7 +35,7 @@ npm i
 To start the project use this command in your terminal and wait for a few seconds and the project will open a new tab in your browser automatically
 
 ```
-npm start
+yarn start
 ```
 
 ### Changing default port
@@ -43,13 +43,13 @@ npm start
 The default port is 8080 but if you want to change it to the port 3000 use this command
 
 ```
-npm start -- --port=3000
+yarn start -- --port=3000
 ```
 
 ## Build the project
 
 ```
-npm run build
+yarn build
 ```
 
 ## Testing the project
@@ -59,25 +59,25 @@ There are some commands to test the project
 ### Test all project
 
 ```
-npm run test
+yarn test
 ```
 
 ### Watch Tests in the project
 
 ```
-npm run test:watch
+yarn test:watch
 ```
 
 ### Update snapshots
 
 ```
-npm run test:update
+yarn test:update
 ```
 
 ### Check the coverage
 
 ```
-npm run test:coverage
+yarn test:coverage
 ```
 
 ## Using Storybok
@@ -85,7 +85,7 @@ npm run test:coverage
 To start the Storybook use the command, it will open a new webpage with Storybook running on port 9000
 
 ```
-npm run storybook
+yarn storybook
 ```
 
 ### Addons
