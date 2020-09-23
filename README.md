@@ -30,7 +30,6 @@ There is a small implementation which can helps you to:
 npm i
 ```
 
-
 ## Starting the project
 
 To start the project use this command in your terminal and wait for a few seconds and the project will open a new tab in your browser automatically
@@ -38,7 +37,6 @@ To start the project use this command in your terminal and wait for a few second
 ```
 npm start
 ```
-
 
 ### Changing default port
 
@@ -76,7 +74,6 @@ npm run test:watch
 npm run test:update
 ```
 
-
 ### Check the coverage
 
 ```
@@ -91,20 +88,25 @@ To start the Storybook use the command, it will open a new webpage with Storyboo
 npm run storybook
 ```
 
-
 ### Addons
 
 The storybook is already configured with some addons like Knobs, Actions, and Info.
 
 ### Create a new story
 
-To create a new story, create a file {yourComponent}.stories.js
-Export the story and import it to **./.storybook/index.stories.js**
-You can check this file **./.storybook/index.stories.js** and other examples in the project to better understand the process.
+To create a new story, create a file {yourComponent}.stories.js and the storybook is already configurated to load your new story, just stop the storybook process and start it again.
 
 ### Create a new story with Redux
 
-Check the **src/pages/ContentPage/ContentPage.stories.js** to see how to use the Redux with Storybook
+You need to add a provider as decorator before the component:
+
+```
+  export default storiesOf('Pages | ContentPage', module)
+  .addDecorator(withProvider)
+  .add('default', () => <ContentPage getContent={getContent} />, {
+    info: { inline: true, header: false }
+  })
+```
 
 ## Commits
 
@@ -112,14 +114,14 @@ This project uses Husk.js and everytime you push the code it will run the pre-co
 
 ## Project Architecture
 
-The project uses SOLID principles and base page architecture. 
+The project uses SOLID principles and base page architecture.
 The Source folder is:
 
 ```
 src
   components
   pages
-  reducers
+  redux
   utils
   routes.js
   index
@@ -134,7 +136,7 @@ components
   Component
     index.js
     Component.test.js
-    Component.storie.js (when it makes sense)
+    Component.stories.js (when it makes sense)
     Component.scss (when it makes sense)
     Component.jsx
 ```

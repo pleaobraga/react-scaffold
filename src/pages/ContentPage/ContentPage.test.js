@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import {
   mockStore,
   initialStateRootReducer
-} from '../../reducers/__mocks__/reduxMock'
+} from '../../redux/__mocks__/reduxMock'
 
 const setup = state => {
   const newState = {
