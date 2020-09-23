@@ -5,15 +5,15 @@ import './Card.scss'
 const Card = ({ title, text }) => {
   return (
     <div className="card">
-      <h1 className="card--title">{title}</h1>
-      <p className="card--text">{text}</p>
+      <h1 className="card__title">{title}</h1>
+      <p className="card__text">{text}</p>
     </div>
   )
 }
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 }
 
 export default React.memo(Card)

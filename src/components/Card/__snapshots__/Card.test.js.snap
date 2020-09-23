@@ -5,12 +5,12 @@ exports[`Card render proprely 1`] = `
   className="card"
 >
   <h1
-    className="card--title"
+    className="card__title"
   >
     Test
   </h1>
   <p
-    className="card--text"
+    className="card__text"
   >
     test
   </p>

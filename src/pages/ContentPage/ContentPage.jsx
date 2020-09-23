@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Card from '../../components/Card'
 import Loading from '../../components/Loading'
@@ -8,25 +8,20 @@ import './ContentPage.scss'
 
 const ContentPage = () => {
   const dispatch = useDispatch()
-  const pageContent = useSelector(state => state.content)
+  const pageContent = useSelector((state) => state.content)
 
-  const getContent = React.useCallback(() => dispatch(actionGetContent()), [
-    dispatch
-  ])
+  const getContent = useCallback(() => dispatch(actionGetContent()), [dispatch])
 
-  React.useEffect(() => {
+  useEffect(() => {
     getContent()
   }, [])
 
   return pageContent.errorContent ? (
     <ErrorPage />
   ) : pageContent.content ? (
-    <div className="page page-content">
-      <Card
-        title={pageContent.content.title}
-        text={pageContent.content.text}
-      />
-    </div>
+    <main className="page page-content">
+      <Card title={pageContent.content.title} text={pageContent.content.text} />
+    </main>
   ) : (
     <Loading />
   )

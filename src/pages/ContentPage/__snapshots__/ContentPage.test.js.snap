@@ -14,7 +14,7 @@ exports[`Content Page should render content correctly 1`] = `
   }
 >
   <ContentPage>
-    <div
+    <main
       className="page page-content"
     >
       <Memo(Card)
@@ -25,18 +25,18 @@ exports[`Content Page should render content correctly 1`] = `
           className="card"
         >
           <h1
-            className="card--title"
+            className="card__title"
           >
             title
           </h1>
           <p
-            className="card--text"
+            className="card__text"
           >
             text
           </p>
         </div>
       </Memo(Card)>
-    </div>
+    </main>
   </ContentPage>
 </Provider>
 `;
@@ -56,7 +56,7 @@ exports[`Content Page should render error correctly 1`] = `
 >
   <ContentPage>
     <ErrorPage>
-      <div
+      <section
         className="page page-error"
       >
         <i
@@ -69,7 +69,7 @@ exports[`Content Page should render error correctly 1`] = `
         >
           This page could not be loaded
         </p>
-      </div>
+      </section>
     </ErrorPage>
   </ContentPage>
 </Provider>

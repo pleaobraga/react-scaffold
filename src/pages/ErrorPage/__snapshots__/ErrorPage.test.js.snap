@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorPage render proprely 1`] = `
-<div
+<section
   className="page page-error"
 >
   <i
@@ -14,5 +14,5 @@ exports[`ErrorPage render proprely 1`] = `
   >
     This page could not be loaded
   </p>
-</div>
+</section>
 `;
