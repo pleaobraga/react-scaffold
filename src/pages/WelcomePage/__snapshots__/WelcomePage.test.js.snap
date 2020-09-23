@@ -4,7 +4,7 @@ exports[`welcomePage render proprely 1`] = `
 <main
   className="page page-welcome"
 >
-  <Memo(Card)
+  <Card
     text="This is a Rect Scaffold made by pleaobraga"
     title="Welcome"
   />
