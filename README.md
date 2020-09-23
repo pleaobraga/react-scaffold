@@ -181,7 +181,7 @@ This component is better than **React.lazy** because it can handle 3 diferent si
 - Error
 - Component
 
-diferent from **React.lazy** and **React.Suspense** which could only handle 2 situasions:
+diferent from **React.lazy** and **React.Suspense** which could only handle 2 situations:
 
 - Loading
 - Component
