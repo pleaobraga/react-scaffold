@@ -8,7 +8,7 @@ const app = express()
 if (process.env.NODE_ENV !== 'production') {
   const webpackMiddleware = require('webpack-dev-middleware')
   const webpack = require('webpack')
-  const webpackConfig = require('./webpack.dev.js')
+  const webpackConfig = require('./config/webpack.dev.js')
   app.use(webpackMiddleware(webpack(webpackConfig)))
 } else {
   app.use(express.static('dist'))
