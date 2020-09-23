@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Card from '../../components/Card'
 import Loading from '../../components/Loading'
-import { getContent as actionGetContent } from '../../reducers/ContentReducer'
+import { getContent as actionGetContent } from '../../redux/ContentReducer'
 import ErrorPage from '../ErrorPage'
 import './ContentPage.scss'
 
