@@ -15,7 +15,7 @@ It is integrated with the newest libraries such as:
 There is a small implementation which can helps you to:
 
 - Improve the architecture of your project
-- Test you project with Jest and Enzyme
+- Test your project with Jest and Enzyme
 - Increase the performance of your project using dynamic imports
 - See practical examples of the new \***\*React Hooks feature**
 - See some implementation of the new React-redux features like useSelector and useDispatch
